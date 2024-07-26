@@ -9,8 +9,8 @@ namespace Core.User.Contracts.AppServices
 {
     public interface IPersonAppService
     {
-        Task<AdminDTO>? GetAdmin(int id);
-        Task<CustomerDTO>? GetCustomer(int id);
-        Task<ManufacturerDTO>? GetManufacturer(int id);
+        Task<AdminDTO>? GetAdmin(int id, CancellationToken cancellationToken);
+        Task<CustomerDTO>? GetCustomer(int id, CancellationToken cancellationToken);
+        Task<ManufacturerDTO>? GetManufacturer(int id, CancellationToken cancellationToken);
     }
 }

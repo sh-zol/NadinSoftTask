@@ -18,39 +18,39 @@ namespace Service.Product
             _repo = repo;
         }
 
-        public Task Create(ProductDTO productDTO)
+        public async Task Create(ProductDTO productDTO,CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _repo.Create(productDTO, cancellationToken);
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _repo.Delete(id, cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAll()
+        public async Task<List<ProductDTO>?> GetAll(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetAll(cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAllByCustomerId(int customerId)
+        public async Task<List<ProductDTO>?> GetAllByCustomerId(int customerId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetAllByCustomerId(customerId, cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId)
+        public async Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetAllByManufacturerId(manufacturerId, cancellationToken);
         }
 
-        public Task<ProductDTO> GetById(int id)
+        public async Task<ProductDTO> GetById(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetById(id, cancellationToken);
         }
 
-        public Task Update(ProductDTO productDTO)
+        public async Task Update(ProductDTO productDTO, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _repo.Update(productDTO, cancellationToken);
         }
     }
 }

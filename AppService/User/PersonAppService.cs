@@ -18,19 +18,19 @@ namespace AppService.User
             _service = service;
         }
 
-        public Task<AdminDTO>? GetAdmin(int id)
+        public async Task<AdminDTO>? GetAdmin(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetAdmin(id, cancellationToken);
         }
 
-        public Task<CustomerDTO>? GetCustomer(int id)
+        public async Task<CustomerDTO>? GetCustomer(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetCustomer(id, cancellationToken);
         }
 
-        public Task<ManufacturerDTO>? GetManufacturer(int id)
+        public async Task<ManufacturerDTO>? GetManufacturer(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetManufacturer(id, cancellationToken);
         }
     }
 }

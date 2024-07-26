@@ -9,12 +9,12 @@ namespace Core.Product.Contracts.AppServices
 {
     public interface IProductAppService
     {
-        Task Create(ProductDTO productDTO);
-        Task Update(ProductDTO productDTO);
-        Task Delete(int id);
-        Task<ProductDTO>? GetById(int id);
-        Task<List<ProductDTO>?> GetAll();
-        Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId);
-        Task<List<ProductDTO>?> GetAllByCustomerId(int customerId);
+        Task Create(ProductDTO productDTO, CancellationToken cancellationToken);
+        Task Update(ProductDTO productDTO, CancellationToken cancellationToken);
+        Task Delete(int id, CancellationToken cancellationToken);
+        Task<ProductDTO>? GetById(int id, CancellationToken cancellationToken);
+        Task<List<ProductDTO>?> GetAll(CancellationToken cancellationToken);
+        Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId, CancellationToken cancellationToken);
+        Task<List<ProductDTO>?> GetAllByCustomerId(int customerId, CancellationToken cancellationToken);
     }
 }

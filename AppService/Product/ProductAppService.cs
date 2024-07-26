@@ -18,39 +18,39 @@ namespace AppService.Product
             _service = service;
         }
 
-        public Task Create(ProductDTO productDTO)
+        public async Task Create(ProductDTO productDTO, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _service.Create(productDTO, cancellationToken);
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _service.Delete(id, cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAll()
+        public async Task<List<ProductDTO>?> GetAll(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetAll(cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAllByCustomerId(int customerId)
+        public async Task<List<ProductDTO>?> GetAllByCustomerId(int customerId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetAllByCustomerId(customerId, cancellationToken);
         }
 
-        public Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId)
+        public async Task<List<ProductDTO>?> GetAllByManufacturerId(int manufacturerId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetAllByManufacturerId(manufacturerId, cancellationToken);
         }
 
-        public Task<ProductDTO> GetById(int id)
+        public async Task<ProductDTO> GetById(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _service.GetById(id, cancellationToken);
         }
 
-        public Task Update(ProductDTO productDTO)
+        public async Task Update(ProductDTO productDTO, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _service.Update(productDTO, cancellationToken);
         }
     }
 }

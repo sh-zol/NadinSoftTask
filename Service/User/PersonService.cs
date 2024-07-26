@@ -18,19 +18,19 @@ namespace Service.User
             _repo = repo;
         }
 
-        public Task<AdminDTO>? GetAdmin(int id)
+        public async Task<AdminDTO>? GetAdmin(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetAdmin(id, cancellationToken);
         }
 
-        public Task<CustomerDTO>? GetCustomer(int id)
+        public async Task<CustomerDTO>? GetCustomer(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetCustomer(id, cancellationToken);
         }
 
-        public Task<ManufacturerDTO>? GetManufacturer(int id)
+        public async Task<ManufacturerDTO>? GetManufacturer(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _repo.GetManufacturer(id, cancellationToken);
         }
     }
 }
