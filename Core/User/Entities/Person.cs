@@ -23,7 +23,7 @@ namespace Core.User.Entities
         [Required]
         [StringLength(20)]
         public string Password { get; set; }
-        public AppUser AppUser { get; set; }
+        public AppUser AppUser { get; set; } 
         public int AppUserId { get; set; }
         public Role Role { get; set; }
     }
